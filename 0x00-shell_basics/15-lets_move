@@ -1,2 +1,2 @@
 #!/bin/bash
-cp grep -E *[A–Z]* /tmp/u
+mv grep -E *[A–Z]* /tmp/u
