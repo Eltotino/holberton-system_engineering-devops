@@ -1,0 +1,1 @@
+in this project we will learn how to use shell and its commands 
