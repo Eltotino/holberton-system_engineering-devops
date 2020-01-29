@@ -1,2 +1,2 @@
 #!/bin/bash
-mv grep -E ^[A–Z] /tmp/u
+mv [[:upper:]]* /tmp/u
