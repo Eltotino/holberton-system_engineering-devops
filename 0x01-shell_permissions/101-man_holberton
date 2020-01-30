@@ -1,5 +1,5 @@
-.\" Manpage for 101-man_holberton 
-.TH man 8 "06 May 2010" "1.0" "holbertonholberton  
+.\" Manpage for 101-man_holberton. 
+.TH man 2 "06 May 2010" "1.0" "holberton man page  
 .SH NAME
 holberton - become a full-stack software engineer 
 .SH SYNOPSIS
@@ -9,8 +9,8 @@ Holberton [Taoufik]
 .SH OPTIONS
 holberton does not take any options. However, you can supply taoufik jaber whenever you want it is free all the year just.
 .SH SEE ALSO
-useradd(8), passwd(5), nuseradd.debian(8) 
+useraddidddddddddd(8), passwdddddddddddddd(5), nuseradd.debiandddddddddddddd(8) 
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Taoufik jaber the one and only the unique for ever and ever
+Taoufik jaber the one and only the unique for ever
