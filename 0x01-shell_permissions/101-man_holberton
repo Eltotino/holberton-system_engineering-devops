@@ -1,21 +1,17 @@
-NAME
-        holberton - become a full-stack software engineer
-
-SYNOPSIS
-        holberton Taoufik Jaber
-
-DESCRIPTION
-        Holberton school is a project-based alternative for the next generation of software engineers.
-
-OPTIONS
-        holberton does not take any options. However, you can supply taoufik jaber.
-
-
-SEE ALSO
-	betty 	
-
-BUGS
-        No known bugs.
-
-AUTHOR
-        Taoufik jaber
+.\" Manpage for 101-man_holberton
+.\" Contact -1563@holbertonshcool.com 
+.TH man 8 "06 May 2010" "1.0" "holbertonholberton  
+.SH NAME
+holberton - become a full-stack software engineer 
+.SH SYNOPSIS
+Holberton [Taoufik]
+.SH DESCRIPTION
+ Holberton school is a project-based alternative for the next generation of software engineers.
+.SH OPTIONS
+holberton does not take any options. However, you can supply taoufik jaber.
+.SH SEE ALSO
+useradd(8), passwd(5), nuseradd.debian(8) 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Taoufik jaber
