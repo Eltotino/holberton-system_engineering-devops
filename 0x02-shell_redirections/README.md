@@ -1,0 +1,1 @@
+how to direct and redirect input and ouptut
