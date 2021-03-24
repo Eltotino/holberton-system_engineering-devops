@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Bash script that dipslays PID of Bash process and currenr script
+pgrep -l bash
