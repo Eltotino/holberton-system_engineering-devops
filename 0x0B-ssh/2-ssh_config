@@ -1,0 +1,4 @@
+Host 1563-web-01
+	Hostname 35.231.228.4
+     	user ubuntu
+     	IdentityFile ~/.ssh/holberton
