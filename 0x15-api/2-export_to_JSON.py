@@ -5,7 +5,9 @@ import requests
 import sys
 
 
-if __name__ == '__main__':
+def to_JSON(employee_id):
+    """sending to Json format"""
+
     api_url = 'https://jsonplaceholder.typicode.com'
     employee_id = sys.argv[1]
     r1 = requests.get('{}/users/{}'.format(api_url, employee_id))
@@ -22,3 +24,7 @@ if __name__ == '__main__':
                 "username": employee_username
             })
         json.dump(data, file)
+
+
+if __name__ == "__main__":
+    to_JSON(sys.argv[1])
