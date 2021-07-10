@@ -5,7 +5,6 @@ import requests
 import sys
 
 
-
 def Csv(employee_id):
     """ export data to CSV"""
     employee_id = sys.argv[1]
