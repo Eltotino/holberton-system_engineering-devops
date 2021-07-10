@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""DataAPI module"""
+"""To CSV module"""
 import requests
 import sys
 import csv
@@ -8,7 +8,8 @@ import csv
 def Csv(employee_id):
     """ export data to CSV"""
     employee_id = sys.argv[1]
-    r1 = requests.get("https://jsonplaceholder.typicode.com/users/" + employee_id).json()
+    r1 = requests.get(
+        'https://jsonplaceholder.typicode.com/users/' + employee_id).json()
     employee_username = r1.get('username')
     r2 = requests.get(
         'https://jsonplaceholder.typicode.com/users/' +
