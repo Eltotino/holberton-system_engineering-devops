@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """To CSV module"""
+import csv
 import requests
 import sys
-import csv
+
 
 
 def Csv(employee_id):
