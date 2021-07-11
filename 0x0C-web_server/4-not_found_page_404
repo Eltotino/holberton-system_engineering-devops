@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#Install/Configure nginx With a "404 Moved Permanently" Redirection
+
+apt-get update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+chmod -R 755 /var/www
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+printf %s "server {		
+	      listen 80 default_server;
+	      listen [::]:80 default_server;
+	      
+	      root /var/www/html ;
+	      
+	      index index.html index.htm index.nginx-debian.html;
+	      server_name  _;
+ 
+	
+	      location / {
+	              try_files \$uri \$uri/ =404;
+	              error_page 404 /custom_404.html;
+	      }
+}" > /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" >/var/www/html/custom_404.html
+service nginx restart
