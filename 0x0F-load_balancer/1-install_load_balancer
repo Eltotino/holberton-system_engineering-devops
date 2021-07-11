@@ -11,8 +11,8 @@ frontend haproxy
     default_backend  cuore
 backend cuore
     balance roundrobin
-        server 1407-web-01 34.73.158.219:80 check
-        server 1407-web-02 34.75.32.130:80 check
+        server 1563-web-01 35.231.228.4:80 check
+        server 1563-web-02 35.196.160.52:80 check
 "        >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
