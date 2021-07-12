@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
-# display information for the specified subdomain
-
-DIG()
+# Display information about subdomain
+print_i()
 {
-    line=$(dig "$1"."$2" | grep -A1 'ANSWER SECTION:' | tail -1)
-    echo "$line" | awk -v subdomain="$1" '{printf "The subdomain %s is a A record and points to %s\n",subdomain,$5}'
+# shellcheck disable=SC2086
+    RECORD_TYPE=$(dig "$2"."$1" | awk 'BEGIN{OFS=" ";} /^'$2'/{print $4}')
+# shellcheck disable=SC2086
+    DESTINATION=$(dig "$2"."$1" | awk 'BEGIN{OFS=" ";} /^'$2'/{print $5}')
+    echo "The subdomain $2 is a $RECORD_TYPE record and points to $DESTINATION"
 }
-
-if [ $# -eq 1 ]
+if [ -z "$2" ]
 then
-    DIG www "$1"
-    DIG lb-01 "$1"
-    DIG web-01 "$1"
-    DIG web-02 "$1"
+  subs=( www lb-01 web-01 web-02 )
+  for i in "${subs[@]}"
+  do
+    print_i "$1" "$i"
+  done
 else
-    DIG "$2" "$1"
+  print_i "$1" "$2"
 fi
