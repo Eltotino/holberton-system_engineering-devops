@@ -8,11 +8,11 @@ printf %s "
 frontend haproxy
     bind *:80
     mode http
-    default_backend  cuore
-backend cuore
+    default_backend  toto
+backend toto
     balance roundrobin
-        server 1563-web-01 35.231.228.4:80 check
-        server 1563-web-02 35.196.160.52:80 check
+        server 1407-web-01 34.74.203.142:80 check
+        server 1407-web-02 34.73.40.242:80 check
 "        >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
