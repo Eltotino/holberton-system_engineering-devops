@@ -11,8 +11,8 @@ frontend haproxy
     default_backend  toto
 backend toto
     balance roundrobin
-        server 1407-web-01 34.74.203.142:80 check
-        server 1407-web-02 34.73.40.242:80 check
+        server 1563-web-01 34.74.203.142:80 check
+        server 1563-web-02 34.73.40.242:80 check
 "        >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
